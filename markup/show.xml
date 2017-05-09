@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<show name="test01">
+<item name="camera">*cg slate  \
+TEST OF \
+FRONT CAMERA \
+These tests are sequential. Always start on the first event of the item and move sequentially using the take button or ALT spacebar on a  keyboard.
+
+open front camera using defaults and testing auto exposure lock
+*cam front ael
+
+open current camera testing zoom and level changes
+*cam  zoom 10 level 10
+*cam  zoom 20 level 20
+*cam  zoom 30 level 30
+
+*cg slate  \
+TEST OF \
+BACK CAMERA 
+
+open back camera using defaults and testing auto exposure lock
+*cam back ael
+
+open current camera testing zoom and level changes
+*cam  zoom 10 level 10
+*cam  zoom 20 level 20
+*cam  zoom 30 level 30
+</item>
+<item name="video">*cg slate \
+TEST OF \
+MEDIAPLAYER \
+These tests are sequential. Always start on the first event of the item and move sequentially using the take button or ALT spacebar on a  keyboard.
+
+open mediaplayer 1 using defaults
+*mp1 news_opener
+
+open mediaplayer 2 using defaults
+*mp2 news_opener 
+
+open mediaplayer 1 testing level changes as timed events
+*mp1 news_opener level 25 
+*mp1 level 50 at 0:01
+*mp1 level 75 at 0:02
+*mp1 level 100 at 0:03
+
+open mediaplayer 2 testing level changes as timed events
+*mp2 news_opener level 25 
+*mp2 level 50 at 0:01
+*mp2 level 75 at 0:02
+*mp2 level 100 at 0:03
+
+open mediaplayer 1 testing start from time
+*mp1 news_opener from 0:05
+
+open mediaplayer 2 testing start from time
+*mp2 news_opener from 0:05
+</item>
+<item name="graphics">*cg slate  \
+TEST OF \
+CHARACTER GENERATOR \
+These tests are sequential. Always start on the first event of the item and move sequentially using the take button or ALT spacebar on a  keyboard.
+
+*cam front
+
+open pdf without page number defaults to page 1
+*cg video_assist 
+
+*cam front
+
+open pdf at page 10
+*cg video_assist page 10
+
+*cam front
+
+take pdf without a file name uses the last file opened, back to back cg's are ok
+*cg page 1 
+*cg page 2 
+*cg page 3 
+
+*cam front
+
+open text template file, edit fields and super
+*cg s1 key \
+DEVELOPING STORY \
+Police say they have arrested and charged a serial killing suspect accused of fatally shooting nine people.
+
+
+</item>
+</show>
